@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Experiment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="cssfilters" style="text-align:center;">
+        <video class="videostream" autoplay="" title="Click me to apply CSS Filters"
+            alt="Click me to apply CSS Filters"></video>
+        <p><button class="capture-button">Capture video</button></p>
+        <p><button id="cssfilters-apply">Apply CSS filter</button></p>
+        <p><button id="saveImage">Save image</button></p>
+        <p><button id="loadImage">Load image</button></p>
+    </div>
+    <div id="dataurl-container">
+        <canvas id="canvas" width="400" height="300"></canvas>
+        <div id="dataurl-header">Image Data URL</div>
+        <textarea id="dataurl" readonly></textarea>
+    </div>
+    <div style="text-align:center;">
+        <img id="loadedImage" src="" />
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

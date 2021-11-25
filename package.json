@@ -1,0 +1,23 @@
+{
+  "name": "glu-cameraexperiment",
+  "version": "1.0.0",
+  "description": "Small app with two functions: 1. Use the camera and save an image as a file to a img dir. 2. Show all the files in the img dir.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martijnkunstman/GLU-CameraExperiment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martijnkunstman/GLU-CameraExperiment/issues"
+  },
+  "homepage": "https://github.com/martijnkunstman/GLU-CameraExperiment#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security"
+  }
+}
