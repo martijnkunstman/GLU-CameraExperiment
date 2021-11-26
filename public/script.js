@@ -51,13 +51,12 @@ loadImage.onclick = function () {
         .then(res => res.json())
         .then(res => {
             console.log(res.data);
-            let array = res.data.split("<br>");
             //empty div
             document.getElementById('loadedImage').innerHTML = "";
             //create all images
-            for (a = 0; a < array.length - 1; a++) {
+            for (a = 0; a < res.data.length; a++) {
                 var img = document.createElement('img');
-                img.src = array[a];
+                img.src = "./img/"+res.data[a];
                 document.getElementById('loadedImage').appendChild(img);
             }
         });
