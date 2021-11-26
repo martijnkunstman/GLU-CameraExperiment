@@ -44,6 +44,8 @@ saveImage.onclick = function () {
         body: JSON.stringify({ postData: image_data_url })
     }).then(res => res.json()).then(res => { console.log(res.status); });
 }
+
+
 loadImage.onclick = function () {
     fetch('/data')
         .then(res => res.json())
