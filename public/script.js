@@ -9,7 +9,6 @@ const loadedImage = document.querySelector("#loadedImage");
 captureVideoButton.onclick = function () {
     navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
 };
-
 function handleSuccess(stream) { video.srcObject = stream; }
 function handleError(error) { console.error("Error: ", error); }
 
@@ -35,7 +34,7 @@ loadImage.onclick = function () {
             console.log(res.data);
             //empty div
             document.getElementById('loadedImage').innerHTML = "";
-            //show all images in the array
+            //create and show all images in the array
             for (a = 0; a < res.data.length; a++) {
                 var img = document.createElement('img');
                 img.src = "./img/" + res.data[a];

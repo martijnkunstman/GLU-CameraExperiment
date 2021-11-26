@@ -21,7 +21,6 @@ app.post('/postdata', (req, res) => {
     res.send({ "status": "ok" })
 })
 
-//load content of data.txt
 app.get('/data', (req, res) => {
     let data = []
     fs.readdirSync("./public/img/").forEach(file => { data.push(file) })
