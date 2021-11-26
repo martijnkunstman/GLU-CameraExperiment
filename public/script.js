@@ -68,7 +68,19 @@ loadImage.onclick = function () {
         .then(res => {
             console.log(res.data);
             let array = res.data.split("<br>");
-            console.log(array);
-            loadedImage.src = array[array.length - 2];
+            //console.log(array);
+            //loadedImage.src = array[array.length - 2];
+
+            
+            //empty div
+            document.getElementById('loadedImage').innerHTML = "";
+
+            //create all images
+            for (a=0;a<array.length - 1;a++)
+            {
+                var img = document.createElement('img');
+                img.src = array[a];
+                document.getElementById('loadedImage').appendChild(img);
+            }
         });
 }
