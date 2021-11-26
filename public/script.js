@@ -6,27 +6,9 @@ const loadImage = document.querySelector("#loadImage");
 const video = document.querySelector("#cssfilters video");
 const dataurl_container = document.querySelector("#dataurl-container");
 const loadedImage = document.querySelector("#loadedImage");
-
-/*
-navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
-    video.srcObject = stream;
-});
-*/
+const filters = ["grayscale", "sepia", "blur", "brightness", "contrast", "hue-rotate", "hue-rotate2", "hue-rotate3", "saturate", "invert", "",];
 
 let filterIndex = 0;
-const filters = [
-    "grayscale",
-    "sepia",
-    "blur",
-    "brightness",
-    "contrast",
-    "hue-rotate",
-    "hue-rotate2",
-    "hue-rotate3",
-    "saturate",
-    "invert",
-    "",
-];
 
 captureVideoButton.onclick = function () {
     navigator.mediaDevices
@@ -68,16 +50,10 @@ loadImage.onclick = function () {
         .then(res => {
             console.log(res.data);
             let array = res.data.split("<br>");
-            //console.log(array);
-            //loadedImage.src = array[array.length - 2];
-
-            
             //empty div
             document.getElementById('loadedImage').innerHTML = "";
-
             //create all images
-            for (a=0;a<array.length - 1;a++)
-            {
+            for (a = 0; a < array.length - 1; a++) {
                 var img = document.createElement('img');
                 img.src = array[a];
                 document.getElementById('loadedImage').appendChild(img);
